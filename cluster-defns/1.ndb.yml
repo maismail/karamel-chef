@@ -1,4 +1,4 @@
-name: HopsworksVagrantMultiNode
+name: NDB
 baremetal:
     username: vagrant
 
@@ -12,20 +12,16 @@ attrs:
     dir: /srv/hops
   kagent:
     enabled: false
-  ndb:
-    ndbd:
-      ips_ids: ["192.168.56.101:1"]
-    mysqld:
-      ips_ids: ["192.168.56.101:100"]
+  mysql:
+    user: hop
+    password: hop
+
 groups:
   biggie:
     size: 1
     baremetal:
-      ip: 192.168.56.101
+      ip: 0.0.0.0
     recipes:
-      - kagent::install
       - ndb::mgmd
       - ndb::ndbd
       - ndb::mysqld
-
-
