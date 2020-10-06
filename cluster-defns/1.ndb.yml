@@ -5,13 +5,15 @@ baremetal:
 cookbooks:
   hopsworks:
     github: "logicalclocks/ndb-chef"
-    branch: 1.4
+    branch: 1.0
 
 attrs:
   install:
     dir: /srv/hops
   kagent:
     enabled: false
+  ndb:
+    url: "https://repo.hops.works/master/mysql-cluster-gpl-7.6.9-linux-glibc2.12-x86_64.tar.gz"
   mysql:
     user: hop
     password: hop
