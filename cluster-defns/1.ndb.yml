@@ -10,6 +10,8 @@ cookbooks:
 attrs:
   install:
     dir: /srv/hops
+  ndb:
+    DataMemory: "128"
   kagent:
     enabled: false
   mysql:
