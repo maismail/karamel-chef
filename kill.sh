@@ -1,6 +1,7 @@
 #!/bin/bash
 
-VBOX_MANAGE=/usr/bin/VBoxManage
+#VBOX_MANAGE=/usr/bin/VBoxManage
+VBOX_MANAGE=VBoxManage
 
 is_multi_vm=`${VBOX_MANAGE} list runningvms | grep hopsworks1`
 
